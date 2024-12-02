@@ -15,6 +15,7 @@ pub fn main() -> utility::generic_error::GenericResult<()> {
     let path_to_data = format!("data/day{}/input.txt", args.day);
     match &args.day {
         1 => implementations::day1::run(&path_to_data)?,
+        2 => implementations::day2::run(&path_to_data)?,
         _ => return Err(utility::generic_error::GenericError::IOError(std::io::Error::new(std::io::ErrorKind::InvalidInput, format!("Unknown day {}", args.day)))),
     }
     Ok(())
