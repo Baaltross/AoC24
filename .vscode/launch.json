@@ -5,47 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
             "request": "launch",
-            "name": "Debug",
-            "cargo": {
-                "args": [
-                    "build",
-                    "--bin=AoC24",
-                    "--package=AoC24"
-                ],
-                "filter": {
-                    "name": "AoC24",
-                    "kind": "bin"
-                }
-            },
+            "program": "${workspaceRoot}/target/debug/AoC24.exe",
             "args": [
-                "--day=4"
+                "--day=5"
             ],
-            "cwd": "${workspaceFolder}"
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true
         },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Unit Tests",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=AoC24",
-                    "--package=AoC24"
-                ],
-                "filter": {
-                    "name": "AoC24",
-                    "kind": "bin"
-                }
-            },
-            "args": [
-                "implementations::day1::run_test_1",
-                "--exact",
-                "--nocapture"
-            ],
-            "cwd": "${workspaceFolder}"
-        }
     ]
 }
