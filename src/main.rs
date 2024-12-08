@@ -21,6 +21,7 @@ pub fn main() -> utility::generic_error::GenericResult<()> {
         5 => implementations::day5::run(&path_to_data)?,
         6 => implementations::day6::run(&path_to_data)?,
         7 => implementations::day7::run(&path_to_data)?,
+        8 => implementations::day8::run(&path_to_data)?,
         _ => return Err(utility::generic_error::GenericError::IOError(std::io::Error::new(std::io::ErrorKind::InvalidInput, format!("Unknown day {}", args.day)))),
     }
     Ok(())

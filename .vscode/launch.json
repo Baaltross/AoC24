@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceRoot}/target/debug/AoC24.exe",
             "args": [
-                "--day=7"
+                "--day=8"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
